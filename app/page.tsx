@@ -78,10 +78,19 @@ export default function HomePage() {
     }
   }
 
-  window.addEventListener('load', () => {
-    const height = document.body.scrollHeight;
-    window.parent.postMessage({ type: 'setHeight', height }, '*');
-  });
+  useEffect(() => {
+      const sendHeight = () => {
+        const height = document.body.scrollHeight;
+        window.parent.postMessage({ type: 'setHeight', height }, '*');
+      };
+
+      sendHeight();
+      window.addEventListener('resize', sendHeight);
+
+      return () => {
+        window.removeEventListener('resize', sendHeight);
+      };
+    }, []);
 
   useEffect(() => {
     const handleScroll = () => setScrollY(window.scrollY)
