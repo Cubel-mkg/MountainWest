@@ -78,6 +78,11 @@ export default function HomePage() {
     }
   }
 
+  window.addEventListener('load', () => {
+    const height = document.body.scrollHeight;
+    window.parent.postMessage({ type: 'setHeight', height }, '*');
+  });
+
   useEffect(() => {
     const handleScroll = () => setScrollY(window.scrollY)
     window.addEventListener("scroll", handleScroll)
