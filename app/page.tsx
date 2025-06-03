@@ -573,7 +573,7 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* Footer */}
+      {/*  
       <footer className="bg-gray-950 text-white py-12 border-t border-gray-800">
         <div className="container mx-auto px-6">
           <div className="grid md:grid-cols-3 gap-8">
@@ -610,7 +610,7 @@ export default function HomePage() {
             <p>&copy; 2024 MW Property Management. All rights reserved.</p>
           </div>
         </div>
-      </footer>
+      </footer>*/}
     </div>
   )
 }
