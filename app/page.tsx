@@ -182,13 +182,13 @@ export default function HomePage() {
             </div>
 
             <nav className="hidden md:flex items-center space-x-8">
-              <Link href="/about-us" className="text-gray-300 hover:text-white font-medium transition-colors">
+              <Link href="/Pages/about-us.tsx" className="text-gray-300 hover:text-white font-medium transition-colors">
                 About Us
               </Link>
-              <Link href="/testimonials" className="text-gray-300 hover:text-white font-medium transition-colors">
+              <Link href="/Pages/testimonials.tsx" className="text-gray-300 hover:text-white font-medium transition-colors">
                 Testimonials
               </Link>
-              <Link href="/regions" className="text-gray-300 hover:text-white font-medium transition-colors">
+              <Link href="/Pages/regions.tsx" className="text-gray-300 hover:text-white font-medium transition-colors">
                 Regions
               </Link>
               <Button
@@ -207,13 +207,13 @@ export default function HomePage() {
           {isMenuOpen && (
             <nav className="md:hidden mt-4 pb-4 border-t border-gray-800 pt-4">
               <div className="flex flex-col space-y-4">
-                <Link href="/about-us" className="text-gray-300 hover:text-white transition-colors">
+                <Link href="/Pages/about-us.tsx" className="text-gray-300 hover:text-white transition-colors">
                   About Us
                 </Link>
-                <Link href="/testimonials" className="text-gray-300 hover:text-white transition-colors">
+                <Link href="/Pages/testimonials.tsx" className="text-gray-300 hover:text-white transition-colors">
                   Testimonials
                 </Link>
-                <Link href="/regions" className="text-gray-300 hover:text-white transition-colors">
+                <Link href="/Pages/regions.tsx" className="text-gray-300 hover:text-white transition-colors">
                   Regions
                 </Link>
                 <Button className="bg-blue-600 hover:bg-blue-700 text-white w-full" onClick={scrollToContact}>
