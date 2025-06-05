@@ -1,7 +1,9 @@
+"use client";
+
 import Image from "next/image"
 import { Building2, Menu, Star, X } from "lucide-react"
 import Link from 'next/link';
-import '@/Pages/testimonials.css'
+import '@/app/testimonials.css'
 import { useState } from "react"
 import { Button } from "@/components/ui/button"
 

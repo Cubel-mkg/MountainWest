@@ -1,10 +1,10 @@
-"use client"
+"use client";
 
 import Image from "next/image"
 import { Mail, MapPin, Clock, Building2, X, Menu } from "lucide-react"
 import { Card, CardContent } from "@/components/ui/card"
 import { useEffect, useState } from "react"
-import '@/Pages/about-us.css'
+import '@/app/about-us.css'
 import { Button } from "@/components/ui/button"
 import Link from "next/link"
 

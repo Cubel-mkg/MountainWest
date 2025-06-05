@@ -1,7 +1,9 @@
+"use client";
+
 import { Card, CardContent } from "@/components/ui/card"
 import { Badge } from "@/components/ui/badge"
 import { Building2, MapPin, Menu, Mountain, X } from "lucide-react"
-import '@/Pages/regions.css'
+import '@/app/regions.css'
 import { useEffect, useState } from "react"
 import { Button } from "@/components/ui/button"
 import Link from "next/link"
