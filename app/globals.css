@@ -418,5 +418,16 @@ h6 {
   overflow: hidden;
   scrollbar-width: none;         /* Firefox */
 }
+.calendly-wrapper .calendly-inline-widget {
+    height: 830px !important;
+}
+
+@media (max-width: 768px) {
+  .calendly-wrapper .calendly-inline-widget {
+    height: 862px !important; /* mobile-specific height */
+  }
+}
+
+
 
 

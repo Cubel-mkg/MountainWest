@@ -274,12 +274,17 @@ export default function HomePage() {
           <AnimatedSection animation="fadeInUp">
             <div className="grid grid-cols-2 lg:grid-cols-3 gap-8 text-center">
               {stats.map((stat, index) => (
-                <div key={index} className="space-y-2">
-                  <div className="text-3xl lg:text-4xl font-bold text-blue-400">
-                    <AnimatedCounter end={stat.number} suffix={stat.suffix} />
-                  </div>
-                  <div className="text-gray-300 font-medium">{stat.label}</div>
-                </div>
+                <div
+                  key={index}
+                  className={`space-y-2 ${
+                    index === stats.length - 1 ? "col-span-2 md:col-span-1" : ""
+                  }`}
+                >
+            <div className="text-3xl lg:text-4xl font-bold text-blue-400">
+              <AnimatedCounter end={stat.number} suffix={stat.suffix} />
+            </div>
+            <div className="text-gray-300 font-medium">{stat.label}</div>
+          </div>
               ))}
             </div>
           </AnimatedSection>
@@ -553,11 +558,11 @@ export default function HomePage() {
             <Card className="bg-gray-800 border-gray-700">
               <CardContent className="p-0 overflow-hidden rounded-lg">
                 {showIframe && (
-                  <div>
+                  <div className="calendly-wrapper">
                     <div
                       className="calendly-inline-widget rounded-lg"
                       data-url="https://calendly.com/propertymanagersmw/30min"
-                      style={{ minWidth: "320px", height: "830px", overflow: "hidden", scrollbarWidth: "none" }}
+                      style={{ minWidth: "320px", overflow: "hidden", scrollbarWidth: "none" }}
                       id="calendly-iframe"
                     ></div>
                     <script
