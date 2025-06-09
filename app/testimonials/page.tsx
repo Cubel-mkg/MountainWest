@@ -129,9 +129,11 @@ export default function TestimonialsPage() {
                 <Link href="/regions" className="text-gray-300 hover:text-white transition-colors">
                   Regions
                 </Link>
-                <Button className="bg-blue-600 hover:bg-blue-700 text-white w-full" >
-                  Book a Free Property Audit
-                </Button>
+                <Link href="/#contact">
+                  <Button className="bg-blue-600 hover:bg-blue-700 text-white w-full" >
+                    Book a Free Property Audit
+                  </Button>
+                </Link>
               </div>
             </nav>
           )}
@@ -205,9 +207,11 @@ export default function TestimonialsPage() {
               Experience the same success as our satisfied customers. Start your journey today.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <button className="bg-white text-gray-900 px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors focus:outline-none focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-gray-800">
-                Book a Free Property Audit
-              </button>
+              <Link href="/#contact">
+                <button className="bg-white text-gray-900 px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors focus:outline-none focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-gray-800">
+                  Book a Free Property Audit
+                </button>
+              </Link>
               <button className="border border-gray-600 text-gray-300 px-8 py-3 rounded-lg font-semibold hover:bg-gray-700 hover:border-gray-500 hover:text-white transition-colors focus:outline-none focus:ring-2 focus:ring-gray-500 focus:ring-offset-2 focus:ring-offset-gray-800">
                 Schedule Demo
               </button>

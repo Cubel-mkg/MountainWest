@@ -96,9 +96,11 @@ export default function RegionsPage() {
                 <Link href="/regions" className="text-gray-300 hover:text-white transition-colors">
                   Regions
                 </Link>
-                <Button className="bg-blue-600 hover:bg-blue-700 text-white w-full" >
-                  Book a Free Property Audit
-                </Button>
+                <Link href="/#contact">
+                  <Button className="bg-blue-600 hover:bg-blue-700 text-white w-full" >
+                    Book a Free Property Audit
+                  </Button>
+                </Link>
               </div>
             </nav>
           )}
