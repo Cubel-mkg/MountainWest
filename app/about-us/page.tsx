@@ -12,10 +12,33 @@ export default function AboutUs() {
   //show Iframe 
     const [showIframe, setShowIframe] = useState(false);
     const [isMenuOpen, setIsMenuOpen] = useState(false)
+    const [scriptLoaded, setScriptLoaded] = useState(false);
+
   
     useEffect(() => {
       setShowIframe(true); // This only runs on the client
     }, []);
+
+    useEffect(() => {
+      const scriptId = "calendly-widget-script";
+      if (!document.getElementById(scriptId)) {
+        console.log(scriptId)
+        const script = document.createElement("script");
+        script.id = scriptId;
+        script.src = "https://assets.calendly.com/assets/external/widget.js";
+        script.async = true;
+        script.onload = () => setScriptLoaded(true);
+        document.body.appendChild(script);
+      } else {
+        console.log("else")
+        window.location.reload()
+        scrollToContact()
+        // Script already exists
+        setScriptLoaded(true);
+      }
+      }, []);
+
+    
 
     const scrollToContact = () => {
     const contactSection = document.getElementById("contact")
@@ -472,7 +495,7 @@ export default function AboutUs() {
                       className="calendly-inline-widget rounded-lg"
                       data-url="https://calendly.com/propertymanagersmw/30min"
                       style={{ minWidth: "320px", height: "830px", overflow: "hidden", scrollbarWidth: "none" }}
-                      id="calendly-iframe"
+                      id="calendly-widget-script"
                     ></div>
                     <script
                       type="text/javascript"

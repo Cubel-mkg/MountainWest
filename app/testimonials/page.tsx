@@ -104,12 +104,14 @@ export default function TestimonialsPage() {
               <Link href="/regions" className="text-gray-300 hover:text-white font-medium transition-colors">
                 Regions
               </Link>
-              <Button
-                className="bg-blue-600 hover:bg-blue-700 text-white px-6 py-2 rounded-lg"
-                
-              >
-                Book a Free Property Audit
-              </Button>
+              <Link href="/#contact">
+                <Button
+                  className="bg-blue-600 hover:bg-blue-700 text-white px-6 py-2 rounded-lg"
+                  
+                >
+                  Book a Free Property Audit
+                </Button>
+              </Link>
             </nav>
 
             <button className="md:hidden text-white" onClick={() => setIsMenuOpen(!isMenuOpen)}>

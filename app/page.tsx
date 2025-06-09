@@ -23,6 +23,7 @@ import {
   X,
   Calendar,
   Award,
+  CircleCheck
 } from "lucide-react"
 import { useState, useEffect } from "react"
 
@@ -60,6 +61,7 @@ export default function HomePage() {
   const [isMenuOpen, setIsMenuOpen] = useState(false)
   const [openFaq, setOpenFaq] = useState<number | null>(null)
   const [scrollY, setScrollY] = useState(0)
+  const [scriptLoaded, setScriptLoaded] = useState(false);
 
   //show Iframe 
   const [showIframe, setShowIframe] = useState(false);
@@ -77,6 +79,35 @@ export default function HomePage() {
       })
     }
   }
+  const scrollToServices = () => {
+    const contactSection = document.getElementById("services")
+    if (contactSection) {
+      contactSection.scrollIntoView({
+        behavior: "smooth",
+        block: "start",
+      })
+    }
+  }
+
+  useEffect(() => {
+    const scriptId = "calendly-widget-script";
+
+    if (!document.getElementById(scriptId)) {
+      console.log(scriptId)
+      const script = document.createElement("script");
+      script.id = scriptId;
+      script.src = "https://assets.calendly.com/assets/external/widget.js";
+      script.async = true;
+      script.onload = () => setScriptLoaded(true);
+      document.body.appendChild(script);
+    } else {
+      console.log("else")
+      window.location.reload()
+      scrollToContact()
+      // Script already exists
+      setScriptLoaded(true);
+    }
+  }, []);
 
   useEffect(() => {
       const sendHeight = () => {
@@ -258,9 +289,9 @@ export default function HomePage() {
                   <Calendar className="w-5 h-5 mr-2 drop-shadow-sm" />
                   Book a Free Property Audit
                 </Button>
-                <Button size="lg" variant="outline" className="border-white text-white hover:bg-white/10 px-8 py-4">
-                  <Phone className="w-5 h-5 mr-2 drop-shadow-sm" />
-                  (555) 697-7673
+                <Button size="lg" variant="outline" className="border-white text-white hover:bg-white/10 px-8 py-4" onClick={scrollToServices}>
+                  <CircleCheck></CircleCheck>
+                  Our Services
                 </Button>
               </div>
             </AnimatedSection>
@@ -563,7 +594,7 @@ export default function HomePage() {
                       className="calendly-inline-widget rounded-lg"
                       data-url="https://calendly.com/propertymanagersmw/30min"
                       style={{ minWidth: "320px", overflow: "hidden", scrollbarWidth: "none" }}
-                      id="calendly-iframe"
+                      id="calendly-widget-script"
                     ></div>
                     <script
                       type="text/javascript"
