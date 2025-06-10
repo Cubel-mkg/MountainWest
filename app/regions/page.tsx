@@ -51,9 +51,7 @@ export default function RegionsPage() {
           <div className="flex items-center justify-between">
             <div className="flex items-center space-x-3">
               <div className="w-10 h-10 bg-gradient-to-br from-blue-500 to-blue-700 rounded-xl flex items-center justify-center shadow-lg">
-                <Link href="/">
-                  <Building2 className="w-6 h-6 text-white drop-shadow-sm cursor-pointer" />
-                </Link>
+                  <Building2 onClick={() => (window.location.href = '/')} className="w-6 h-6 text-white drop-shadow-sm cursor-pointer" />
               </div>
               <div>
                 <h1 className="text-xl font-bold text-white">MW Property Management</h1>
@@ -71,14 +69,13 @@ export default function RegionsPage() {
               <Link href="/regions" className="text-gray-300 hover:text-white font-medium transition-colors">
                 Regions
               </Link>
-              <Link href="/#contact">
                 <Button
+                
                   className="bg-blue-600 hover:bg-blue-700 text-white px-6 py-2 rounded-lg"
-                  
+                  onClick={() => (window.location.href = '/#contact')}
                 >
                   Book a Free Property Audit
                 </Button>
-              </Link>
             </nav>
 
             <button className="md:hidden text-white" onClick={() => setIsMenuOpen(!isMenuOpen)}>
@@ -98,11 +95,9 @@ export default function RegionsPage() {
                 <Link href="/regions" className="text-gray-300 hover:text-white transition-colors">
                   Regions
                 </Link>
-                <Link href="/">
-                  <Button className="bg-blue-600 hover:bg-blue-700 text-white w-full" >
+                  <Button onClick={() => (window.location.href = '/#contact')} className="bg-blue-600 hover:bg-blue-700 text-white w-full" >
                     Book a Free Property Audit
                   </Button>
-                </Link>
               </div>
             </nav>
           )}

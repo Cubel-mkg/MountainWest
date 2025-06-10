@@ -70,6 +70,7 @@ export default function HomePage() {
     setShowIframe(true); // This only runs on the client
   }, []);
 
+
   const scrollToContact = () => {
     const contactSection = document.getElementById("contact")
     if (contactSection) {
@@ -80,9 +81,9 @@ export default function HomePage() {
     }
   }
   const scrollToServices = () => {
-    const contactSection = document.getElementById("services")
-    if (contactSection) {
-      contactSection.scrollIntoView({
+    const serviceSection = document.getElementById("services")
+    if (serviceSection) {
+      serviceSection.scrollIntoView({
         behavior: "smooth",
         block: "start",
       })
@@ -90,20 +91,20 @@ export default function HomePage() {
   }
 
   useEffect(() => {
-    const scriptId = "calendly-widget-script";
+    const scriptClassName = "calendly-spinner";
 
-    if (!document.getElementById(scriptId)) {
-      console.log(scriptId)
+    if (!document.getElementsByClassName(scriptClassName)) {
+      console.log(scriptClassName)
       const script = document.createElement("script");
-      script.id = scriptId;
+      script.id = "calendly-widget-script";
       script.src = "https://assets.calendly.com/assets/external/widget.js";
       script.async = true;
       script.onload = () => setScriptLoaded(true);
       document.body.appendChild(script);
-    } else {
+    } else if(document.getElementsByClassName(scriptClassName)) {
       console.log("else")
-      window.location.reload()
-      scrollToContact()
+      //window.location.reload()
+      //scrollToContact()
       // Script already exists
       setScriptLoaded(true);
     }
@@ -123,11 +124,11 @@ export default function HomePage() {
       };
     }, []);
 
-  //useEffect(() => {
-    //const handleScroll = () => setScrollY(window.scrollY)
-    //window.addEventListener("scroll", handleScroll)
-    //return () => window.removeEventListener("scroll", handleScroll)
-  //}, [])
+  useEffect(() => {
+    const handleScroll = () => setScrollY(window.scrollY)
+    window.addEventListener("scroll", handleScroll)
+    return () => window.removeEventListener("scroll", handleScroll)
+  }, [])
 
   const services = [
     "Tenant Screening & Placement",
@@ -202,9 +203,7 @@ export default function HomePage() {
           <div className="flex items-center justify-between">
             <div className="flex items-center space-x-3">
               <div className="w-10 h-10 bg-gradient-to-br from-blue-500 to-blue-700 rounded-xl flex items-center justify-center shadow-lg">
-                <Link href="/">
-                  <Building2 className="w-6 h-6 text-white drop-shadow-sm cursor-pointer" />
-                </Link>
+                  <Building2 onClick={() => (window.location.href = '/')} className="w-6 h-6 text-white drop-shadow-sm cursor-pointer" />
               </div>
               <div>
                 <h1 className="text-xl font-bold text-white">MW Property Management</h1>

@@ -31,8 +31,8 @@ export default function AboutUs() {
         document.body.appendChild(script);
       } else {
         console.log("else")
-        window.location.reload()
-        scrollToContact()
+        //window.location.reload()
+        //scrollToContact()
         // Script already exists
         setScriptLoaded(true);
       }
@@ -128,9 +128,7 @@ export default function AboutUs() {
           <div className="flex items-center justify-between">
             <div className="flex items-center space-x-3">
               <div className="w-10 h-10 bg-gradient-to-br from-blue-500 to-blue-700 rounded-xl flex items-center justify-center shadow-lg">
-                <Link href="/">
-                  <Building2 className="w-6 h-6 text-white drop-shadow-sm cursor-pointer" />
-                </Link>
+                  <Building2 onClick={() => (window.location.href = '/')} className="w-6 h-6 text-white drop-shadow-sm cursor-pointer" />                
               </div>
               <div>
                 <h1 className="text-xl font-bold text-white">MW Property Management</h1>
@@ -517,7 +515,7 @@ export default function AboutUs() {
             <div>
               <div className="flex items-center space-x-3 mb-4">
                 <div className="w-8 h-8 bg-gradient-to-br from-blue-500 to-blue-700 rounded-xl flex items-center justify-center shadow-md">
-                  <Building2 className="w-5 h-5 text-white drop-shadow-sm" />
+                  <Building2 onClick={() => (window.location.href = '/')} className="w-5 h-5 text-white drop-shadow-sm" />
                 </div>
                 <span className="text-xl font-semibold">MW Property Management</span>
               </div>

@@ -229,7 +229,7 @@ export default function TestimonialsPage() {
             <div>
               <div className="flex items-center space-x-3 mb-4">
                 <div className="w-8 h-8 bg-gradient-to-br from-blue-500 to-blue-700 rounded-xl flex items-center justify-center shadow-md">
-                  <Building2 className="w-5 h-5 text-white drop-shadow-sm" />
+                  <Building2 onClick={() => (window.location.href = '/')} className="w-5 h-5 text-white drop-shadow-sm" />
                 </div>
                 <span className="text-xl font-semibold">MW Property Management</span>
               </div>
