@@ -470,7 +470,7 @@ export default function AboutUs() {
             <div className="space-y-8">
               {[
                 { icon: Mail, title: "Email", detail: "propertymanagersmw@gmail.com" },
-                { icon: MapPin, title: "Service Area", detail: "Utah, Colorado, Nevada, NEW MEXICO, Arizona, Idaho" },
+                { icon: MapPin, title: "Service Area", detail: "Utah, Colorado, Nevada, New Mexico, Arizona, Idaho" },
                 { icon: Clock, title: "Business Hours", detail: "Mon-Fri: 8:00 AM - 6:00 PM" },
               ].map((contact, index) => (
                 <div key={index} className="flex items-center space-x-4">
