@@ -15,9 +15,9 @@ export default function AboutUs() {
     const [scriptLoaded, setScriptLoaded] = useState(false);
 
   
-    //useEffect(() => {
-    //  setShowIframe(true); // This only runs on the client
-    //}, []);
+    useEffect(() => {
+      setShowIframe(true); // This only runs on the client
+    }, []);
 
     useEffect(() => {
       const scriptId = "calendly-widget-script";
