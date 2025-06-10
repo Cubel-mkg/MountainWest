@@ -208,9 +208,6 @@ export default function TestimonialsPage() {
                 <button onClick={() => (window.location.href = '/#contact')} className="bg-white text-gray-900 px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors focus:outline-none focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-gray-800">
                   Book a Free Property Audit
                 </button>
-              <button className="border border-gray-600 text-gray-300 px-8 py-3 rounded-lg font-semibold hover:bg-gray-700 hover:border-gray-500 hover:text-white transition-colors focus:outline-none focus:ring-2 focus:ring-gray-500 focus:ring-offset-2 focus:ring-offset-gray-800">
-                Schedule Demo
-              </button>
             </div>
           </div>
         </div>
