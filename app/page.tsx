@@ -123,11 +123,11 @@ export default function HomePage() {
       };
     }, []);
 
-  useEffect(() => {
-    const handleScroll = () => setScrollY(window.scrollY)
-    window.addEventListener("scroll", handleScroll)
-    return () => window.removeEventListener("scroll", handleScroll)
-  }, [])
+  //useEffect(() => {
+    //const handleScroll = () => setScrollY(window.scrollY)
+    //window.addEventListener("scroll", handleScroll)
+    //return () => window.removeEventListener("scroll", handleScroll)
+  //}, [])
 
   const services = [
     "Tenant Screening & Placement",
@@ -270,16 +270,16 @@ export default function HomePage() {
             }}
           />
           {/* Darker overlay for dark theme */}
-          <div className="absolute inset-0 bg-black/60"></div>
+          <div className="absolute inset-0 bg-black/70"></div>
         </div>
 
         <div className="container mx-auto px-2 sm:px-4 lg:px-6 xl:px-8 relative z-10">
           <div className="max-w-5xl mx-auto text-center">
             <AnimatedSection animation="fadeInUp">
               <h1 className="text-4xl lg:text-6xl font-bold text-white mb-8 leading-tight">
-                Your Property, Managed Like It's Our Own
+                A service for investors, by investors
               </h1>
-              <p className="text-xl text-gray-200 mb-12 max-w-2xl mx-auto">We Handle Everything. Seriously.</p>
+              <p className="text-xl text-white font-medium mb-12 max-w-2xl mx-auto">We Handle Everything. Seriously.</p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
                 <Button
                   size="lg"
@@ -515,9 +515,9 @@ export default function HomePage() {
             <StaggeredCards className="space-y-4" delay={200}>
               {[
                 {
-                  question: "What is included in your management fee?",
+                  question: "What’s included in your management",
                   answer:
-                    "Our comprehensive fee includes tenant screening, rent collection, maintenance coordination, financial reporting, and legal compliance.",
+                    "One flat rate covers rent collection, maintenance, lease enforcement, bookkeeping, and vendor coordination.",
                 },
                 {
                   question: "How do you handle maintenance requests?",
@@ -571,7 +571,7 @@ export default function HomePage() {
             <div className="space-y-8">
               {[
                 { icon: Mail, title: "Email", detail: "propertymanagersmw@gmail.com" },
-                { icon: MapPin, title: "Service Area", detail: "Utah, Colorado, Nevada, Nuevo Mexico, Arizona, Idaho" },
+                { icon: MapPin, title: "Service Area", detail: "Utah, Colorado, Nevada, NEW MEXICO, Arizona, Idaho" },
                 { icon: Clock, title: "Business Hours", detail: "Mon-Fri: 8:00 AM - 6:00 PM" },
               ].map((contact, index) => (
                 <div key={index} className="flex items-center space-x-4">

@@ -15,9 +15,9 @@ export default function AboutUs() {
     const [scriptLoaded, setScriptLoaded] = useState(false);
 
   
-    useEffect(() => {
-      setShowIframe(true); // This only runs on the client
-    }, []);
+    //useEffect(() => {
+    //  setShowIframe(true); // This only runs on the client
+    //}, []);
 
     useEffect(() => {
       const scriptId = "calendly-widget-script";
@@ -294,9 +294,9 @@ export default function AboutUs() {
                         </svg>
                       )}
                       {index === 2 && (
-                        <svg className="w-7 h-7 text-blue-500" fill="none" stroke="currentColor" viewBox="0 0 24 24" width="800px" height="800px" role="img" xmlns="http://www.w3.org/2000/svg" aria-labelledby="dolarIconTitle" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" color="#000000">
-                          <g id="SVGRepo_bgCarrier" stroke-width="0"/>
-                          <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"/>
+                        <svg className="w-7 h-7 text-blue-500" fill="none" stroke="currentColor" viewBox="0 0 24 24" width="800px" height="800px" role="img" xmlns="http://www.w3.org/2000/svg" aria-labelledby="dolarIconTitle" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" color="#000000">
+                          <g id="SVGRepo_bgCarrier" strokeWidth="0"/>
+                          <g id="SVGRepo_tracerCarrier" strokeLinecap="round" strokeLinejoin="round"/>
                           <g id="SVGRepo_iconCarrier"> <title id="dolarIconTitle">Dolar</title> <path d="M12 4L12 6M12 18L12 20M15.5 8C15.1666667 6.66666667 14 6 12 6 9 6 8.5 7.95652174 8.5 9 8.5 13.140327 15.5 10.9649412 15.5 15 15.5 16.0434783 15 18 12 18 10 18 8.83333333 17.3333333 8.5 16"/> </g>
                         </svg>
                       )}
@@ -338,9 +338,9 @@ export default function AboutUs() {
                       )}
                       {index === 6 && (
                         <svg width="800px" height="800px" className="w-7 h-7 text-blue-500" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                          <g id="SVGRepo_bgCarrier" stroke-width="0"/>
-                          <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"/>
-                          <g id="SVGRepo_iconCarrier"> <path d="M15 15L21 21" stroke="#3b82f6" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/> <path d="M17 10C17 13.866 13.866 17 10 17C6.13401 17 3 13.866 3 10C3 6.13401 6.13401 3 10 3C13.866 3 17 6.13401 17 10Z" stroke="#3b82f6" stroke-width="2"/> </g>
+                          <g id="SVGRepo_bgCarrier" strokeWidth="0"/>
+                          <g id="SVGRepo_tracerCarrier" strokeLinecap="round" strokeLinejoin="round"/>
+                          <g id="SVGRepo_iconCarrier"> <path d="M15 15L21 21" stroke="#3b82f6" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/> <path d="M17 10C17 13.866 13.866 17 10 17C6.13401 17 3 13.866 3 10C3 6.13401 6.13401 3 10 3C13.866 3 17 6.13401 17 10Z" stroke="#3b82f6" strokeWidth="2"/> </g>
                         </svg>
                       )}
                       {index === 7 && (
@@ -472,7 +472,7 @@ export default function AboutUs() {
             <div className="space-y-8">
               {[
                 { icon: Mail, title: "Email", detail: "propertymanagersmw@gmail.com" },
-                { icon: MapPin, title: "Service Area", detail: "Utah, Colorado, Nevada, Nuevo Mexico, Arizona, Idaho" },
+                { icon: MapPin, title: "Service Area", detail: "Utah, Colorado, Nevada, NEW MEXICO, Arizona, Idaho" },
                 { icon: Clock, title: "Business Hours", detail: "Mon-Fri: 8:00 AM - 6:00 PM" },
               ].map((contact, index) => (
                 <div key={index} className="flex items-center space-x-4">
