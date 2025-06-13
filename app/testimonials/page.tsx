@@ -84,9 +84,16 @@ export default function TestimonialsPage() {
           <div className="flex items-center justify-between">
             <div className="flex items-center space-x-3">
               <div className="w-10 h-10 bg-gradient-to-br from-blue-500 to-blue-700 rounded-xl flex items-center justify-center shadow-lg">
-                <Link href="/">
-                  <Building2 className="w-6 h-6 text-white drop-shadow-sm cursor-pointer" />
-                </Link>
+                  {/*<Building2 onClick={() => (window.location.href = '/')} className="w-6 h-6 text-white drop-shadow-sm cursor-pointer" />*/}
+                  <Image
+                    src={"images/logo-mw.png"}
+                    alt={"logo"}
+                    width={58}
+                    height={58}
+                    className="w-6 h-6 text-white drop-shadow-sm cursor-pointer"
+                    onClick={() => (window.location.href = '/')}
+                    style={{ color: "transparent", width: "37px", height: "37px" }}
+                  />
               </div>
               <div>
                 <h1 className="text-xl font-bold text-white">MW Property Management</h1>
@@ -220,7 +227,15 @@ export default function TestimonialsPage() {
             <div>
               <div className="flex items-center space-x-3 mb-4">
                 <div className="w-8 h-8 bg-gradient-to-br from-blue-500 to-blue-700 rounded-xl flex items-center justify-center shadow-md">
-                  <Building2 onClick={() => (window.location.href = '/')} className="w-5 h-5 text-white drop-shadow-sm" />
+                    <Image
+                      src={"images/logo-mw.png"}
+                      alt={"logo"}
+                      width={58}
+                      height={58}
+                      className="w-5 h-5 text-white drop-shadow-sm"
+                      onClick={() => (window.location.href = '/')}
+                      style={{ color: "transparent", width: "27px", height: "27px" }}
+                    />
                 </div>
                 <span className="text-xl font-semibold">MW Property Management</span>
               </div>
