@@ -285,8 +285,8 @@ export default function HomePage() {
         <div className="container mx-auto px-2 sm:px-4 lg:px-6 xl:px-8 relative z-10">
           <div className="max-w-5xl mx-auto text-center">
             <AnimatedSection animation="fadeInUp">
-              <h1 className="text-4xl lg:text-6xl font-bold text-white mb-8 leading-tight">
-                A service for investors, by investors
+              <h1 className="text-4xl lg:text-[59px]  font-bold text-white mb-8 leading-tight">
+                A service for investors, by investors.
               </h1>
               <p className="text-xl text-white font-medium mb-12 max-w-2xl mx-auto">We Handle Everything. Seriously.</p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
@@ -524,7 +524,7 @@ export default function HomePage() {
             <StaggeredCards className="space-y-4" delay={200}>
               {[
                 {
-                  question: "What’s included in your management",
+                  question: "What’s included in your management?",
                   answer:
                     "One flat rate covers rent collection, maintenance, lease enforcement, bookkeeping, and vendor coordination.",
                 },
@@ -573,7 +573,7 @@ export default function HomePage() {
         <div className="container mx-auto px-6">
           <AnimatedSection animation="fadeInUp" className="text-center mb-16">
             <h2 className="text-3xl font-bold text-white mb-6">Contact Us</h2>
-            <p className="text-xl text-gray-300">Schedule a consultation to discuss your property management needs.</p>
+            <p className="text-xl text-gray-300">Schedule a consultation to discuss your property management needs and boost your returns.</p>
           </AnimatedSection>
 
           <div className="grid lg:grid-cols-2 gap-16 max-w-6xl mx-auto">
