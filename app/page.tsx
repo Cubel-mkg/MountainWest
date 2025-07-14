@@ -26,7 +26,7 @@ import {
   Award,
   CircleCheck
 } from "lucide-react"
-import { useState, useEffect } from "react"
+import { useState, useEffect, useRef } from "react"
 
 // Custom CheckCircle SVG component
 const CustomCheckCircleGreen = ({ className }: { className?: string }) => (
@@ -71,15 +71,16 @@ export default function HomePage() {
     setShowIframe(true); // This only runs on the client
   }, []);
 
+  const sectionRef = useRef<HTMLDivElement>(null);
 
   const scrollToContact = () => {
     const contactSection = document.getElementById("contact")
     if (contactSection) {
-      contactSection.scrollIntoView({
-        behavior: "smooth",
-        block: "start",
-      })
-    }
+      sectionRef.current?.scrollIntoView({
+        behavior: 'smooth',
+        block: 'start',
+      });
+    } 
   }
   const scrollToServices = () => {
     const serviceSection = document.getElementById("services")
@@ -598,7 +599,7 @@ export default function HomePage() {
             <Card className="bg-gray-800 border-gray-700">
               <CardContent className="p-0 overflow-hidden rounded-lg">
                 {showIframe && (
-                  <div className="calendly-wrapper">
+                  <div ref={sectionRef} className="calendly-wrapper">
                     <div
                       className="calendly-inline-widget rounded-lg"
                       data-url="https://calendly.com/propertymanagersmw/30min"

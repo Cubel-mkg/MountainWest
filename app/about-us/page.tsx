@@ -3,7 +3,7 @@
 import Image from "next/image"
 import { Mail, MapPin, Clock, Building2, X, Menu } from "lucide-react"
 import { Card, CardContent } from "@/components/ui/card"
-import { useEffect, useState } from "react"
+import { useEffect, useRef, useState } from "react"
 import '@/app/about-us.css'
 import { Button } from "@/components/ui/button"
 import Link from "next/link"
@@ -40,15 +40,17 @@ export default function AboutUs() {
 
     
 
+    const sectionRef = useRef<HTMLDivElement>(null);
+    
     const scrollToContact = () => {
-    const contactSection = document.getElementById("contact")
-    if (contactSection) {
-      contactSection.scrollIntoView({
-        behavior: "smooth",
-        block: "start",
-      })
+      const contactSection = document.getElementById("contact")
+      if (contactSection) {
+        sectionRef.current?.scrollIntoView({
+          behavior: 'smooth',
+          block: 'start',
+        });
+      } 
     }
-  }
 
   const teamMembers = [
     {
@@ -497,7 +499,7 @@ export default function AboutUs() {
             <Card className="bg-gray-800 border-gray-700">
               <CardContent className="p-0 overflow-hidden rounded-lg">
                 {showIframe && (
-                  <div>
+                  <div ref={sectionRef}>
                     <div
                       className="calendly-inline-widget rounded-lg"
                       data-url="https://calendly.com/propertymanagersmw/30min"
